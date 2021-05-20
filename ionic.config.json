@@ -1,0 +1,7 @@
+{
+  "name": "loginIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
