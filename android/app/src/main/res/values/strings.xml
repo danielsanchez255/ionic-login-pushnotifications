@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">loginIonic</string>
+    <string name="title_activity_main">loginIonic</string>
+    <string name="package_name">io.ionic.starter</string>
+    <string name="custom_url_scheme">io.ionic.starter</string>
+    <string name="facebook_app_id">511250253260263</string> 
+    <string name="fb_login_protocol_scheme">fb511250253260263</string>
+    <string name ="server_client_id">713048455918-o30vcmuolvh71oe3i0n9e9ju04ec2ppd.apps.googleusercontent.com</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+</resources>

@@ -17,10 +17,49 @@
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <meta name="google-signin-client_id" content="713048455918-o30vcmuolvh71oe3i0n9e9ju04ec2ppd.apps.googleusercontent.com" />
 </head>
 
 <body>
   <app-root></app-root>
 </body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBhHvSW0eFazK_hkqrBU1aYzv3z8NsKp5Y",
+    authDomain: "ioniclogin-79302.firebaseapp.com",
+    projectId: "ioniclogin-79302",
+    storageBucket: "ioniclogin-79302.appspot.com",
+    messagingSenderId: "713048455918",
+    appId: "1:713048455918:web:7be1c25fb202eae75c11ff"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script>
+  window.fbAsyncInit = function () {
+    FB.init({
+      appId: '511250253260263',
+      cookie: true,
+      xfbml: true,
+      version: 'v5.0'
+    });
+  };
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "https://connect.facebook.net/en_US/sdk.js";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
 
 </html>

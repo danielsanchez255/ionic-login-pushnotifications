@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>713048455918-fotigot8gsp29hfpj6cmuq2vcmucin0u.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.713048455918-fotigot8gsp29hfpj6cmuq2vcmucin0u</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>713048455918-pi6hnikuah0nc6a1lpvn5jculi7qf8hf.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyATHMugPJoxXbk1bRoEzF_DifF2H5dwuL8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>713048455918</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>io.ionic.starter</string>
+	<key>PROJECT_ID</key>
+	<string>ioniclogin-79302</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ioniclogin-79302.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:713048455918:ios:d6b317cf27720fb75c11ff</string>
+</dict>
+</plist>

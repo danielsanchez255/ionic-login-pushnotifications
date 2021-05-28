@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "713048455918",
+    "project_id": "ioniclogin-79302",
+    "storage_bucket": "ioniclogin-79302.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:713048455918:android:a9d3b56ef050576d5c11ff",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "713048455918-ogke5nu0g7bciopetjr7cm8814o0ap1u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.ionic.starter",
+            "certificate_hash": "6f1c4a2152c0d36dbc225afc36e72c4255df2942"
+          }
+        },
+        {
+          "client_id": "713048455918-o30vcmuolvh71oe3i0n9e9ju04ec2ppd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB19eIPQtV_jzsqh_LD1XWywZAoVlLCa3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "713048455918-o30vcmuolvh71oe3i0n9e9ju04ec2ppd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "713048455918-fotigot8gsp29hfpj6cmuq2vcmucin0u.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.ionic.starter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
