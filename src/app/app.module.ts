@@ -5,13 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire'
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { environment } from '../environments/environment';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +23,8 @@ import { AppRoutingModule } from './app-routing.module';
     HttpClientModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig), 
     AngularFireAuthModule,    
-    AngularFirestoreModule ],
+    AngularFirestoreModule,
+    AngularFireMessagingModule ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

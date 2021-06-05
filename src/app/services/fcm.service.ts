@@ -1,13 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { HttpClient, HttpHeaders,  } from '@angular/common/http';
+
+//Plugins
 import { ActionPerformed, PushNotifications, PushNotificationSchema, Token } from '@capacitor/push-notifications';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class FcmService {
 
-  constructor(private router: Router) { }
+  pushRegistrationToken = null;
+
+  constructor(private router: Router, public http: HttpClient) { }
 
   initPush() {
     
@@ -29,7 +35,8 @@ export class FcmService {
     PushNotifications.addListener(
       'registration',
       (token: Token) => {
-        console.log('My token: ' + JSON.stringify(token));
+        this.pushRegistrationToken = token.value;
+        console.log('My token: ' + token.value);
       }
     );
  
@@ -54,5 +61,34 @@ export class FcmService {
         }
       }
     );
+  }
+
+  async pushMessageSender() {
+    var registrationToken = this.pushRegistrationToken;
+
+    let headers = new HttpHeaders({
+      'Authorization': 'key=AAAApgT_-u4:APA91bFGBnfizxlHXpBDolO54Ruj5FhtKT9fzUTyxg2MPnfrKY_sMoaiNqFG-z8g4chA1Tj-KFmWjWCCg3310vTjp80uPl8nvhBgHr4Q1tXE7LI9PWmnFSTZ1l2-U5l6d0VxVHaeOVqW',
+      'Content-Type' : 'application/json'
+    });
+
+    let options = {
+        headers: headers
+    }
+
+    let message = {
+      "notification": {
+        "title": "Push notification", 
+        "body": "This is a notification from your cell"
+       },
+       "to" : registrationToken
+    }
+    
+    this.http.post('https://fcm.googleapis.com/fcm/send', message, options)
+        .subscribe(data => {
+            console.log(JSON.stringify(data));
+    }, error => {
+      console.log(JSON.stringify(error));
+    });
+      
   }
 }

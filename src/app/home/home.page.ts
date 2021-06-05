@@ -1,12 +1,14 @@
-import { HttpClient } from '@angular/common/http'
 import { Component } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { HttpClient } from '@angular/common/http';
 import firebase from 'firebase/app';
 //import { isPlatform } from '@ionic/angular';
 
 //Plugins
 import { FacebookLoginPlugin, FacebookLogin } from '@capacitor-community/facebook-login';
 import { GoogleAuth } from '@reslear/capacitor-google-auth';
+import { PushNotifications } from '@capacitor/push-notifications';
+
 
 //Services
 import { FcmService } from '../services/fcm.service';
@@ -15,7 +17,6 @@ import { AuthServiceService } from '../services/auth-service.service';
 //environment
 import { environment } from '../../environments/environment';
 
-//import { Plugins } from '@capacitor/core';
 //import "@codetrix-studio/capacitor-google-auth";
 
 
@@ -73,6 +74,7 @@ export class HomePage {
   async googleSignup() {
     const googleUser = await GoogleAuth.signIn();
     this.googleUser = googleUser;
+    this.fcmService.initPush();
   }
 
   async getCurrentToken() {
@@ -149,6 +151,7 @@ export class HomePage {
         }
       ]
     });
+    this.fcmService.initPush();
     alert.present();
   }
 
@@ -192,6 +195,14 @@ export class HomePage {
       }]
     });
     await alert.present();
+  }
+
+  async sendPushNotification() {
+    this.fcmService.pushMessageSender();
+  }
+
+  async resetBadgeCount() {
+    PushNotifications.removeAllDeliveredNotifications();
   }
 
 }

@@ -36,6 +36,7 @@
 
   <ion-button (click)="login()" expand="full">Login Facebook</ion-button>
   <ion-button (click)="googleSignup()" expand="full">Login Google</ion-button>
+  
 
   <ion-card *ngIf="facebookUser">
     <img [src]="facebookUser.picture.data.url">
@@ -51,9 +52,21 @@
       {{ facebookUser.email }}
       <ion-button (click)="logout()" expand="full">Logout</ion-button>
     </ion-card-content>
+    <ion-button (click)="resetBadgeCount()" expand="full">Reset</ion-button>
   </ion-card>
 
-  <ion-card-content>
-    {{ googleUser | json }}
-  </ion-card-content>
+  <ion-card *ngIf="googleUser">
+    <ion-card-content>
+      <img [src]="googleUser.imageUrl">
+      <ion-card-title>
+        {{ googleUser.givenName }} {{ googleUser.familyName}}
+      </ion-card-title>
+      <ion-card-title>
+        {{ googleUser.email }}
+      </ion-card-title>
+      <ion-button (click)="resetBadgeCount()" expand="full">Reset</ion-button>
+    </ion-card-content>
+    <ion-button (click)="sendPushNotification()" expand="full">Send Notification</ion-button>
+  </ion-card>
+  
 </ion-content>
